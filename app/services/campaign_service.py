@@ -97,7 +97,7 @@ class CampaignService:
                     data=data,
                     headers={"Content-Type": "application/json"}
                 )
-                with urllib.request.urlopen(req, timeout=10) as response:
+                with urllib.request.urlopen(req, timeout=30) as response:
                     res_data = json.loads(response.read().decode())
                     if res_data.get("status") == "accepted":
                         print(f"[CAMPAIGN DISPATCH] Campaign {campaign.id} successfully queued in Channel Service.", flush=True)
