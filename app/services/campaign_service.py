@@ -132,7 +132,7 @@ class CampaignService:
             # Wait for the service to fully wake up
             time.sleep(5)
 
-            max_retries = 10
+            max_retries = 15
 
             for attempt in range(max_retries):
                 try:
